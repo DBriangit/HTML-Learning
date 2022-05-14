@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice HTML</title>
+        <script>
+            function myFunction() {
+            document.getElementById("nande").innerHTML = "Terima kasih telah dipencet";
+        }
+            </script>
+
+        <style>
+            .city {
+                background-color: tomato;
+                color : white;
+                padding: 20px;
+            }
+
+            .main {
+                text-align:center
+            }
+
+            #myHeader{
+                background-color: blue;
+                color: white;
+                padding: 30px;
+                text-align: center;
+            }
+            h2 {color: blue;}
+            h1 {color: blue;}
+        </style>
+    </head>
+    <body>
+        <h2>The class attribute</h2>
+        <p>Use CSS to style elements with the class name "city":</p>
+
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+        
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+
+
+        <h2>Multiple Classes</h2>
+        <p>
+        Here, all three h2 elements belongs to the "city" class. In addition, London also belongs 
+        to the "main" class, which center-aligns the text.
+        </p>
+
+        <h2 class="city main">London</h2>
+        <h2 class="city">Paris</h2>
+        <h2 class="city main">Tokyo</h2>
+
+
+
+        <h2>Use of The class Attribute in JavaScript</h2>
+        <p>Click the button to hide all elements with class name "city":</p>
+        <button onclick="myFunction()">Hide elements</button>
+
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+
+        
+
+        <h2>The id Attribute</h2>
+        <p>Use CSS to style an element with the id "myHeader":</p>
+
+        <h1 id="myHeader">My Header</h1>
+
+
+        <script>
+            function myFunction() {
+                var x = document.getElementsByClassName("city");
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+            }
+        </script>
+
+        <h2 id="C4">Chapter 4</h2>
+        <a href="https://www.w3schools.com/html/html_id.asp">Jump to Chapter 4</a>
+        
+
+        <h2>Using The id Attribute in JavaScript</h2>
+        <p>JavaScript can access an element with a specified id by using the getElementById() method:</p>
+
+        <h1 id="myHeader">Hello World!</h1>
+        <button onclick="displayResult()">Change text</button>
+
+        <script>    
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day!";
+        }
+        </script>
+
+        <h1>My First JavaScript</h1>
+
+        <button type="button"
+        onclick="document.getElementById( 'demo' ).innerHTML = Date()">
+        Click me to display date and time.</button>
+        
+        <p id="demo"></p>
+
+        <h2>Use JavaScript to Change Text</h2>
+        <p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+
+       
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        </script>
+
+    <!-- ERROR(A Taste of JavaScript) -->
+    <h1>My First JavaScript</h1>
+    <p>JavaScript can change the content of an HTML element:</p>
+
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="demo">This is a demonstration.</p>
+
+    <script>
+    function myFunction() { 
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+    </script> 
+    <!-- ERROR -->
+
+
+    <!-- Bingung(JavaScript change styles) -->
+    <h1>My First JavaScript</h1>
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+    <script>
+    function myFunction() {
+        document.getElementById("demo").style.fontsize = "25px";
+        document.getElementById("demo").style.color = "red";
+        document.getElementById("demo").style.backgroundColor = "yellow";
+    }
+    </script>
+
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <!-- Bingung(JavaScript change styles) -->
+
+
+    
+    <h1>My First JavaScript</h1>
+    <p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    
+    <script>
+        function light(sw) {
+          var pic;
+          if (sw == 0) {
+            pic = "pic_off.gif"
+          } else {
+            pic = "pic_on.gif"
+          }
+          document.getElementById('Folder').src = pic;
+        }
+        </script>
+        
+        <img id="Folder" src="pic_off.gif" width="100" height="180">
+
+        <p>
+        <button type="button" onclick="light(1)">Light On</button>
+        <button type="button" onclick="light(0)">Light Off</button>
+        </p>
+    
+
+        <h2>Using a Full URL File Path</h2>
+        <img src="pegunungan.png" alt="Folder" style="width:300px">
+
+
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+  
+        <p>The content of the body element is displayed in the browser window.</p>
+        <p>The content of the title element is displayed in the browser tab, in favorites and in search-engine results.</p>
+    
+    
+        <link rel="stylesheet" href="css PracticeHTML/style.css"/>
+
+        <h1>My Web Page</h1>
+        <p id="nande">Pencet cuy!!</p>
+        <button type="button" onclick="myFunction()">Button</button>
+
+        
+
+       
+    </body>
+</html>
