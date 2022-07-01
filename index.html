@@ -1,194 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Practice HTML</title>
-        <script>
-            function myFunction() {
-            document.getElementById("nande").innerHTML = "Terima kasih telah dipencet";
-        }
-            </script>
-
+        <link rel="stylesheet" href="style.css">
         <style>
-            .city {
-                background-color: tomato;
-                color : white;
-                padding: 20px;
-            }
-
-            .main {
-                text-align:center
-            }
-
-            #myHeader{
-                background-color: blue;
+            a:link, a:visited {
+                background-color: #f44336;
                 color: white;
-                padding: 30px;
+                padding: 15px 25px;
                 text-align: center;
+                text-decoration: none;
+                display: inline-block;
             }
-            h2 {color: blue;}
-            h1 {color: blue;}
+            a:hover, a:active {
+                background-color: red;
+            }
         </style>
+        <Title>HTML LEARNING!</Title>
     </head>
     <body>
-        <h2>The class attribute</h2>
-        <p>Use CSS to style elements with the class name "city":</p>
-
-        <h2 class="city">London</h2>
-        <p>London is the capital of England.</p>
-
-        <h2 class="city">Paris</h2>
-        <p>Paris is the capital of France.</p>
-        
-        <h2 class="city">Tokyo</h2>
-        <p>Tokyo is the capital of Japan.</p>
-
-
-        <h2>Multiple Classes</h2>
-        <p>
-        Here, all three h2 elements belongs to the "city" class. In addition, London also belongs 
-        to the "main" class, which center-aligns the text.
-        </p>
-
-        <h2 class="city main">London</h2>
-        <h2 class="city">Paris</h2>
-        <h2 class="city main">Tokyo</h2>
-
-
-
-        <h2>Use of The class Attribute in JavaScript</h2>
-        <p>Click the button to hide all elements with class name "city":</p>
-        <button onclick="myFunction()">Hide elements</button>
-
-        <h2 class="city">London</h2>
-        <p>London is the capital of England.</p>
-
-        
-
-        <h2>The id Attribute</h2>
-        <p>Use CSS to style an element with the id "myHeader":</p>
-
-        <h1 id="myHeader">My Header</h1>
-
-
-        <script>
-            function myFunction() {
-                var x = document.getElementsByClassName("city");
-                for (var i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-            }
-        </script>
-
-        <h2 id="C4">Chapter 4</h2>
-        <a href="https://www.w3schools.com/html/html_id.asp">Jump to Chapter 4</a>
-        
-
-        <h2>Using The id Attribute in JavaScript</h2>
-        <p>JavaScript can access an element with a specified id by using the getElementById() method:</p>
-
-        <h1 id="myHeader">Hello World!</h1>
-        <button onclick="displayResult()">Change text</button>
-
-        <script>    
-        function displayResult() {
-            document.getElementById("myHeader").innerHTML = "Have a nice day!";
-        }
-        </script>
-
-        <h1>My First JavaScript</h1>
-
-        <button type="button"
-        onclick="document.getElementById( 'demo' ).innerHTML = Date()">
-        Click me to display date and time.</button>
-        
-        <p id="demo"></p>
-
-        <h2>Use JavaScript to Change Text</h2>
-        <p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
-
-       
-        <p id="demo"></p>
-
-        <script>
-            document.getElementById("demo").innerHTML = "Hello JavaScript!";
-        </script>
-
-    <!-- ERROR(A Taste of JavaScript) -->
-    <h1>My First JavaScript</h1>
-    <p>JavaScript can change the content of an HTML element:</p>
-
-    <button type="button" onclick="myFunction()">Click Me!</button>
-
-    <p id="demo">This is a demonstration.</p>
-
-    <script>
-    function myFunction() { 
-        document.getElementById("demo").innerHTML = "Hello JavaScript!";
-    }
-    </script> 
-    <!-- ERROR -->
-
-
-    <!-- Bingung(JavaScript change styles) -->
-    <h1>My First JavaScript</h1>
-    <p id="demo">JavaScript can change the style of an HTML element.</p>
-
-    <script>
-    function myFunction() {
-        document.getElementById("demo").style.fontsize = "25px";
-        document.getElementById("demo").style.color = "red";
-        document.getElementById("demo").style.backgroundColor = "yellow";
-    }
-    </script>
-
-    <button type="button" onclick="myFunction()">Click Me!</button>
-    <!-- Bingung(JavaScript change styles) -->
-
-
+        <h1>Start Learning!</h1>
+    <br>
     
-    <h1>My First JavaScript</h1>
-    <p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
-
-    
-    <script>
-        function light(sw) {
-          var pic;
-          if (sw == 0) {
-            pic = "pic_off.gif"
-          } else {
-            pic = "pic_on.gif"
-          }
-          document.getElementById('Folder').src = pic;
-        }
-        </script>
+    <h2>HTML links</h2>
+    <p>HTML links are defined with the a tag:</p>
+    <a href="https://www.youtube.com" >This is link youtube</a>
         
-        <img id="Folder" src="pic_off.gif" width="100" height="180">
-
-        <p>
-        <button type="button" onclick="light(1)">Light On</button>
-        <button type="button" onclick="light(0)">Light Off</button>
-        </p>
-    
-
-        <h2>Using a Full URL File Path</h2>
-        <img src="pegunungan.png" alt="Folder" style="width:300px">
-
-
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
-  
-        <p>The content of the body element is displayed in the browser window.</p>
-        <p>The content of the title element is displayed in the browser tab, in favorites and in search-engine results.</p>
+    <h2>HTML Image</h2>
+    <p>HTML images are defined with the img tag:</p>
+    <img src="YouTube-logo.jpg" alt="Youtube Image" width="156" height="120">
+    <p>Youtube image</p>
+    <img src="YouTube-logo.jpg" alt="Youtube Image" style="width: 156px; height: 120px;">
     
     
-        <link rel="stylesheet" href="css PracticeHTML/style.css"/>
+    <!--HTML elements with no content are called empty elements.
+    
+    The <br> tag defines a line break, and is an empty element without a closing tag:-->
+    <br>
+    <br>
+        <p>This is a <br> paragraph with a line break.</p>
+    <br>
+    
+    <h2>The style attribute</h2>    
+    <p>The style attribute is used to add styles to an element, such as color:</p>
+    <p style="color:blue;">This is a blue paragraph</p>
+    <br>
 
-        <h1>My Web Page</h1>
-        <p id="nande">Pencet cuy!!</p>
-        <button type="button" onclick="myFunction()">Button</button>
+    <h2 title="I'm a header">The tittle attribute</h2>
+    <p title="I'm a paragraph">Mouse over this paragraph, to display the title attribute as a tooltip</p>
+    
+    <h1>About W3Schools</h1>
+    <p title=About W3Schools>
+        You cannot omit quotes around an attribute value
+        if the value contains space
+    </p>
+    <br>
 
-        
+    <h2>Single or Double Quotes?</h2>
+    <p>In some situations, when the attribute value itself contains double quotes, 
+    it is necessary to use single quotes:</p>
+    <p>Move your mouse over the paragraphs below to see the effect:</p>
+    
+    <p title='John "Shotgun" Nelson'>John with double quotes</p>
+    <p title="John 'Shotgun' Nelson">John with single quotes</p>
+    <br>
+    
+    <h1 style="font-size: 40px;">Heading 1 using style in HTML</h1>
+    <p>You can change the size of a heading with the style attribute, using the font-size property</p>
+    <br>
+    
+    <p>the pre tag preserves both space and line breaks:</p>
+    <pre>
+        My Bonnie lies over the ocean.
 
-       
+        My Bonnie lies over the sea.
+
+        My Bonnie lies over the ocean.
+
+        Oh, bring back my Bonnie to me.
+    </pre>
+       <br>
+
+    <h1 style="background-color:powderblue;">This is a heading</h1>
+    <p style="background-color: red; font-style: italic;">This is a paragraph</p>
+     <br>
+
+    <h1 style="font-size:200%;">This is a heading</h1>
+    <p style="font-size: 150%;">This is a paragraph</p>
+     <br>
+
+    <h1 style="text-align:center;">Centered Heading</h1>
+    <p style="text-align: center;">Centered Paragraph.</p>
+     <br>
+
+    <p><b>This text is bold</b></p>
+    <p><i>This text is italic</i></p>
+    <p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
+    <p><strong>This text is strong!</strong></p>
+    <p><em>This text is emphized!</em></p>
+    <br>
+    
+    <p>Do not forget to buy <mark>milk</mark></p>
+    <p>My favorite color is <del>red</del> blue.</p>
+    <p>My favorite color is <del>red</del> <ins>blue.</ins></p>
+    <br>
+
+    <p>Browsers usually insert quotation marks around the q element.</p>
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+    <br>
+
+    <p>The <abbr title="World Health Organitation">WHO</abbr> was founded in 1948.</p>
+    <br>
+
+    <p>The HTML address element defines contact information (author/owner) of a document or article.</p>
+
+    <address>
+        Written by Brian.<br>
+        Visit us at:<br>
+        dbriangit.github.com<br>
+        Box 2881, Bangladesh<br>
+        China
+    </address>
+    <br>
+
+    <p>The HTML cite elements defines the title of a work</p>
+    <p>Browsers usually display cite elements in italic</p>
+
+    <img src="Screenshot (792).png" width="450" height="250" alt="Gon">
+    <p><cite>Hunter X Hunter </cite> Gon. Screenshotted in 2022.</p>
+    <br>
+
+    <p>If your browser supports bi-directional override (bdo), the next line will 
+    be written from right to left (rtl):</p>
+    
+    <bdo dir="rtl">This line will be written from right to left</bdo>
+     <br>
+    
+    <h2>Link Button</h2>
+    <p>A link styled as a button:</p>
+    <a href="default.asp" target="_blank">This is a link</a>
+    <br>
+
+    <p><a href="#C4">Jump to Chapter 4</a></p>
+    <p><a href="#C10">Jump to Chapter 10</a></p>
+
+    <h2>Chapter 1</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 2</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 3</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2 id="C4">Chapter 4</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 5</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 6</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 7</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 8</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 9</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2 id="C10">Chapter 10</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <img src="/Image/Screenshot (795).png" alt="Haikyu Anime Photo"
+    style="width: 500px; height:280px">
+    <br>
+
+    <h2>Images on Another Server</h2>
+    <img src="https://i.pinimg.com/564x/04/b9/7a/04b97a9835e1642666581d5917d48d6f.jpg" alt="Genei Ryodan" 
+    style="width:200px;height:302px;">
+    <br>
+    <br>
+
+    <h2>Animated Images</h2>
+    <p>HTML allows moving images:</p>
+    <img src="https://www.w3schools.com/html/programming.gif" alt="Moving Picture"
+    style="width: 48px; height: 48px;"><br>
+    <img src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2021/02/4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.gif?fit=476%2C280&ssl=1"
+    alt="Moving Picture1" style="width: 200px; height: 120px;"><br>
+    
+    <a href="https://www.w3schools.com/html/smiley.gif">
+    <img src="https://www.w3schools.com/html/smiley.gif" alt="Smiley Picture" style="width: 42px; height: 42px;">
+    </a>
+    
+    
     </body>
 </html>
